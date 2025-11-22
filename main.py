@@ -62,8 +62,6 @@ if __name__ == "__main__":
     print("\n--- First 5 Rows ---")
     print(df_master.head())
     
-import os
-
 def generate_summary_report(building_manager, df_master, output_folder='output'):
     os.makedirs(output_folder, exist_ok=True)
     
@@ -207,4 +205,5 @@ for index, row in df_master.iterrows():
     
 
 generate_dashboard(manager)
+
 generate_summary_report(manager, df_master)
